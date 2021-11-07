@@ -15,7 +15,7 @@ HTML, CSS & JavaScript
 
 ## Users are presented with a clear, easily navigable webpage with a single button to generate a password:
 
-![Password-Generator Screenshots](Screenshots/Site1.jpg)
+![alt text](https://github.com/[ViennaBorowska]/[Password-Generator]/blob/[main]/Site1.jpg?raw=true)
 
 ## Once the button is clicked, the first prompt appears to select the password length:
 
