@@ -95,7 +95,7 @@ console.log(pword);
 }
 
 
-// Writes password to HTML #password element
+// Prints password to HTML #password element
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
