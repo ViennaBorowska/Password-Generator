@@ -13,14 +13,16 @@ var generatePassword = function() {
 var lengthPmt = 0;
 lengthPmt = window.prompt("Desired password length? 8 - 128 characters");
 
-  /* EXIT FUNCTION IF CANCEL IS PRESSED?? */
-  if (lengthPmt === false) {
+  // Exits function if CANCEL is pressed
+  if (lengthPmt === null) {
     return null
   }
 
+// Declare variables for random generation & final password
   var pword = "";
   var allowed = [];
 
+//If password length selected is outside set parameters (8-128), throw Error and restart function
   if (parseInt(lengthPmt) < 8 || parseInt(lengthPmt) > 128) {
         lengthPmt = window.alert("Length must be between 8 and 128 characters.");
         generatePassword();
@@ -69,14 +71,9 @@ lengthPmt = window.prompt("Desired password length? 8 - 128 characters");
 
  
   if (!upperC && !lowerC && !nums && !syms) {
-    alert("You must select at least one option to generate your password!");
-    return null;
- /*   upperC = confirm("Would you like to use uppercase letters?");
-    lowerC = confirm("Would you like to use lowercase letters?");
-    nums = confirm("Would you like to use numbers?");
-    syms = confirm("Would you like to use special characters?");
-    */
-  }
+    alert("You must select at least one character option to generate your password!");
+    return null;  
+  };
 
    var char = allowed 
 
