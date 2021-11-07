@@ -19,27 +19,27 @@ HTML, CSS & JavaScript
 
 ## Once the button is clicked, the first prompt appears to select the password length:
 
-![Password-Generator Screenshots](Screenshots/Site2.jpg)
+<img src="Screenshots/Site2.JPG"> 
 
 ## If the length chosen is outside the set parameters (1-128), an error is thrown;
 
-![Password-Generator Screenshots](Screenshots/Site3.jpg)
+<img src="Screenshots/Site3.JPG"> 
 
 ## Once an acceptable selection is made, the user is prompted for 4 character selections: Uppercase, Lowercase, Numbers and Symbols:
 
-![Password-Generator Screenshots](Screenshots/Site4.jpg)
+<img src="Screenshots/Site4.JPG"> 
 
 ## Each selection is validated:
 
-![Password-Generator Screenshots](Screenshots/Site5.jpg) 
+<img src="Screenshots/Site5.JPG"> 
 
 ## Once all valid selections have been made, user is alerted that password will be generated:
 
-![Password-Generator Screenshots](Screenshots/Site6.jpg) 
+<img src="Screenshots/Site6.JPG"> 
 
 ## Password is generated and printed to the HTML textarea on screen:
 
-![Password-Generator Screenshots](Screenshots/Site7.jpg) 
+<img src="Screenshots/Site7.JPG"> 
 
 
 ## FILES
