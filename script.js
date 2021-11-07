@@ -8,7 +8,7 @@ var useNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 var useSyms = [ "!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~", "'", '"', "\\" ];
 
 
-// Write password to the #password input
+// User selects password length
 var generatePassword = function() {
 var lengthPmt = 0;
 lengthPmt = window.prompt("Desired password length? 8 - 128 characters");
@@ -28,7 +28,7 @@ lengthPmt = window.prompt("Desired password length? 8 - 128 characters");
         generatePassword();
      };
   
-
+//Confirms and data collection for character selection + validation alerts for all selections made
   if (parseInt(lengthPmt) >= 8 || parseInt(lengthPmt) <= 128) {
       console.log(lengthPmt);
     var upperC = confirm("Should upper case letters be included?")
@@ -69,12 +69,19 @@ lengthPmt = window.prompt("Desired password length? 8 - 128 characters");
      
     };
 
- 
+ // Check whether at least 1 character selection is made, if no selections made then exit function
   if (!upperC && !lowerC && !nums && !syms) {
     alert("You must select at least one character option to generate your password!");
-    return null;  
+    return null;
+    /* Re-run character confirm statements?
+    upperC = confirm("Would you like to use uppercase letters?");
+    lowerC = confirm("Would you like to use lowercase letters?");
+    nums = confirm("Would you like to use numbers?");
+    syms = confirm("Would you like to use special characters?");
+    */
   };
 
+//Create random password from selected characters
    var char = allowed 
 
 
@@ -88,7 +95,7 @@ console.log(pword);
 }
 
 
-
+// Writes password to HTML #password element
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
