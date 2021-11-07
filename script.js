@@ -67,8 +67,9 @@ lengthPmt = window.prompt("Desired password length? 8 - 128 characters");
     };
 
 /**/ 
-  while (!upperC && !lowerC && !nums && !syms) {
+  if (!upperC && !lowerC && !nums && !syms) {
     alert("You must select at least one option to generate your password!");
+    return "";
     upperC = confirm("Would you like to use uppercase letters?");
     lowerC = confirm("Would you like to use lowercase letters?");
     nums = confirm("Would you like to use numbers?");
@@ -77,14 +78,7 @@ lengthPmt = window.prompt("Desired password length? 8 - 128 characters");
 
    var char = allowed 
 
-    /*if (upperC === true) {
-      pword += rando(allowed.upperC = "QWERTYUIOPASDFGHJKLZXCVBNM") 
-      console.log("hello")};
-    
-    if (lowerC === true) {pword += rando(allowed.lowerC = "qwertyuiopasdfghjklzxcvbnm")};
-    if (nums === true) {pword += rando(allowed.nums = "1234567890")};
-    if (syms === true) {pword += rando(allowed.syms = "!@#$%^&*(){}[]=<>/,.")};
-  */
+
  for (var i = 0, n = char.length; i < parseInt(lengthPmt); i++) {
    pword += char[Math.floor(Math.random() * n)];
  }
