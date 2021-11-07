@@ -16,6 +16,7 @@ HTML, CSS & JavaScript
 ## Users are presented with a clear, easily navigable webpage with a single button to generate a password:
 
 ![Screenshot](./Screenshots/Site1.jpg)
+<img src="Screenshots/Site1.jpg">  
 
 ## Once the button is clicked, the first prompt appears to select the password length:
 
