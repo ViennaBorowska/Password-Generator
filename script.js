@@ -5,7 +5,7 @@ var generateBtn = document.querySelector("#generate");
 var useUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var useLower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var useNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-var useSyms = [ "!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~", " ' ", " ", ' " ', "\\" ];
+var useSyms = [ "!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~", "'", '"', "\\" ];
 
 
 // Write password to the #password input
@@ -17,7 +17,7 @@ lengthPmt = window.prompt("Desired password length? 8 - 128 characters");
   if (lengthPmt === false) {
     return null
   }
-  
+
   var pword = "";
   var allowed = [];
 
@@ -67,14 +67,15 @@ lengthPmt = window.prompt("Desired password length? 8 - 128 characters");
      
     };
 
-/**/ 
+ 
   if (!upperC && !lowerC && !nums && !syms) {
     alert("You must select at least one option to generate your password!");
-    return "";
-    upperC = confirm("Would you like to use uppercase letters?");
+    return null;
+ /*   upperC = confirm("Would you like to use uppercase letters?");
     lowerC = confirm("Would you like to use lowercase letters?");
     nums = confirm("Would you like to use numbers?");
     syms = confirm("Would you like to use special characters?");
+    */
   }
 
    var char = allowed 
