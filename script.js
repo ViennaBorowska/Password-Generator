@@ -13,10 +13,11 @@ var generatePassword = function() {
 var lengthPmt = 0;
 lengthPmt = window.prompt("Desired password length? 8 - 128 characters");
 
-  /* EXIT FUNCTION IF CANCEL IS PRESSED??
+  /* EXIT FUNCTION IF CANCEL IS PRESSED?? */
   if (lengthPmt === false) {
-    return
-  }*/
+    return null
+  }
+  
   var pword = "";
   var allowed = [];
 
