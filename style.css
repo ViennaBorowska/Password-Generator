@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --myOrange: #fd841f;
+  --myPink: #cd104d;
+  --myPurple: #9c2c77;
+  --myBlack: black;
+}
+
 html,
 body,
 .wrapper {
@@ -14,7 +21,7 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: #f9fbfd;
+  background-color: var(--myBlack);
 }
 
 .wrapper {
@@ -27,26 +34,47 @@ header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  color: var(--myPurple);
+  font-size: 3rem;
+  animation: 2s anim-lineUp ease-out 1;
+}
+
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--myOrange);
   border-radius: 5px;
   border-width: 1px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-  color: hsl(206, 17%, 28%);
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 8px 0px;
+  color: var(--myPurple);
   font-size: 18px;
   margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
+  animation: 2s anim-lineUp ease-out 1;
 }
 
 .card-header::after {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: var(--myOrange);
   height: 2px;
 }
 
@@ -62,7 +90,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: var(--myOrange);
   height: 2px;
 }
 
@@ -74,11 +102,9 @@ header {
 
 .btn {
   border: none;
-  background-color: hsl(360, 91%, 36%);
+  background-color: var(--myPink);
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
-  color: hsl(0, 0%, 100%);
+  color: var(--myOrange);
   display: inline-block;
   font-size: 22px;
   line-height: 22px;
@@ -103,6 +129,7 @@ button[disabled] {
   appearance: none;
   border: none;
   display: block;
+  background: var(--myPink);
   width: 100%;
   padding-top: 15px;
   padding-left: 15px;
@@ -112,10 +139,16 @@ button[disabled] {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
+  border: 2px dashed var(--myBlack);
   border-radius: 6px;
   resize: none;
   overflow: hidden;
+  color: var(--myBlack);
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--myBlack);
 }
 
 @media (max-width: 690px) {
